@@ -1,0 +1,31 @@
+<template name = "mainLayout">
+  <header>
+  <nav class = "navbar navbar-default">
+      <div class = "navbar-header">
+        <a class = "navbar-brand" href="{{pathForHomepage}}"> Teen Tutors </a>
+      </div>
+      <ul class = "nav navbar-nav">
+        {{#if currentUser}}
+          {{#if currentUser.emails.[0].verified}}
+          <li><a href="{{pathForProfile}}">Profile</a></li>
+          <li><a href="{{pathForTutors}}">Find a Tutor</a></li>
+          <li><a href="{{pathForContact}}">Contact</a></li>
+          <li class = 'guide'><a href="">How to Guide</a></li>
+          <li id = 'logout'><a href="">Logout</a></li>
+          {{else}}
+          <li id = 'logout'><a href="">Logout</a></li>
+          {{/if}}
+        {{else}}
+        <li><a href="{{pathForSignup}}">Sign Up</a></li>
+        <li><a href="{{pathForLogin}}">Log In</a></li>
+        <li><a href="{{pathForContact}}">Contact</a> </li>
+        {{/if}}
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{>Template.dynamic template=content}}
+    {{>guideModal}}
+  </main>
+</template>

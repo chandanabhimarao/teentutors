@@ -1,0 +1,42 @@
+<template name = "otherprofile">
+  <div class = 'row'>
+    <div class = 'col-sm-8 col-sm-offset-2'>
+      <div class = 'page-header'>
+        <center> <h1>  {{user.firstName}} {{user.lastName}}</h1> </center>
+      </div>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-sm-6'>
+      <div class = 'page-header'>
+      <center>  <h3> Basic Info </h3> </center>
+      </div>
+      <h4>
+      <ul>
+        <li> Education Level: {{user.educationLevel}} </li>
+      </ul>
+    </h4>
+    </div>
+
+    <div class = 'col-sm-6'>
+      <div class = 'page-header'>
+        <center><h3> Tutor Info </h3>
+      </center>
+      </div>
+      <h4>
+      <ul>
+        <li> Tutoring Subjects:
+          <ul>
+            {{#each user.subjects}}
+              <li> {{this}} </li>
+            {{/each}}
+          </ul>
+        </li>
+        <li> Country:  {{user.Country}}</li>
+      </ul>
+      </h4>
+    </div>
+  </div>
+  {{>requestSessionModal}}
+  <div class = 'events-calendar'> </div>
+</template>

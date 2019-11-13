@@ -1,0 +1,20 @@
+<template name = "homepage">
+<div class="wrapper">
+       <img src="people-woman-coffee-meeting.jpg" class="img-responsive" alt="Responsive image">
+        <h1 id="text">
+          <div class = "row">
+            <div class = "col-sm-4">
+        {{#if currentUser}}
+        {{#unless currentUser.emails.[0].verified}}
+        Please check your email to verify your email address.
+       {{else}}
+
+            Hello {{user.firstName}}
+
+        {{/unless}}
+        {{/if}}
+      </div>
+        </div>
+        </h1>
+</div>
+</template>

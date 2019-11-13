@@ -1,0 +1,37 @@
+<template name = "guideModal">
+  <div class="modal fade" id="guide-modal" tabindex="-1" role="dialog" aria-labelledby="guide-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="guide">How to Use Teen Tutors</h4>
+        </div>
+        <div class = "modal-body">
+          {{#if user.tutor}}
+
+              <h3> Tutors </h3>
+              <ul>
+              <li> Access your profile by clicking on the "Profile" tab on the navigation bar. </li>
+              <li> Please list the subjects you would like to teach by clicking "Edit Profile" </li>
+              <li> Add sessions by clicking on the on the time you would like to hold your session on your personal calendar. Once prompted, enter the subject you are teaching during that session. Currently we only offer one-hour sessions. </li>
+              <li> You will be notified when a student has requested your session. When a student has requested the session, click on the session event to accept or deny the request. </li>
+              <li> Once you have accepted a session (now marked Taken), you may enter your session whiteboard by clicking on your session event. The session may only be entered during the time of your session. </li>
+              </ul>
+              <h3> Student Activity </h3>
+              <ul>
+                <li> Tutors may also request to be students of other sessions. These sessions will appear on your personal calendar with the mark "student". </li>
+                <li> Access other tutors by going to the "Find a Tutor" tab. After searching for the subject you would like to learn, click on a tutor you would like to work with. Select an open session on their calendar to request to be a student of that session. </li>
+              </ul>
+          {{else}}
+            <h3> Students </h3>
+             <ul>
+               <li> Access your profile by clicking on the "Profile" tab on the navigation bar. Here you can see all of your registered sessions on your personal calendar. </li>
+               <li> Find a tutor by clicking the "Find a Tutor" tab on the navigation bar. Here you can search for a tutor based on the subject you have selected. Click on a tutor you would like to work with and select an open session on their calendar to request it. </li>
+               <li> Once your tutor has accepted your session, you may enter your session whiteboard by clicking your session event. The session may only be entered during the time of your session </li>
+             </ul>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

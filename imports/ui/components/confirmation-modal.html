@@ -1,0 +1,18 @@
+<template name = 'confirmationModal'>
+  <div class="modal fade" data-target = "confirmation-modal" id="confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="confirmation-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title" id="add-edit-event">Are you sure you want to edit this session?</h2>
+        </div>
+        <div class = "modal-body">
+          <div class = "row">
+              <button class="btn btn-success accept-edit">Yes</button>
+              <button class="btn btn-danger deny-edit">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

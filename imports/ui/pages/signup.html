@@ -1,0 +1,134 @@
+<template name='signup'>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1> Sign Up </h1>
+      <!--    <h1> sign up </h1>
+          {{#if wrongcode}}
+          <div class = "row">
+            <div class="col s12 card-panel #d32f2f red darken-2">
+              <h5 class = "white-text"> Error. Wrong Code. </h5>
+            </div>
+          </div>
+          {{/if}}
+          {{#if meteorerror}}
+            <div class = "row">
+              <div class="col s12 card-panel #d32f2f red darken-2">
+                <h5 class = "white-text"> {{errorreason}}</h5>
+              </div>
+            </div>
+          {{/if}}
+          {{#if passworderror}}
+            <div class = "row">
+              <div class="col s12 card-panel #d32f2f red darken-2">
+                <h5 class = "white-text">Your passwords do not match </h5>
+              </div>
+            </div>
+          {{/if}}
+          {{#if passwordlengtherror}}
+            <div class = "row">
+              <div class="col s12 card-panel #d32f2f red darken-2">
+                <h5 class = "white-text">Your password is too short (Must be more than 6 characters) </h5>
+              </div>
+            </div>
+          {{/if}}-->
+          <form class='form-horizontal'>
+            <div class = "form-group">
+              <label for="first_name" class= "col-sm-2 control-label">First Name</label>
+              <div class="col-sm-8">
+                  <input id="first_name" type="text" class = "required form-control">
+              </div>
+            </div>
+            <div class = "form-group">
+              <label for="last_name" class= "col-sm-2 control-label">Last Name</label>
+              <div class="col-sm-8">
+                  <input id="last_name" type="text" class = "required form-control">
+              </div>
+            </div>
+            <div class = "form-group">
+              <label for="email_address" class= "col-sm-2 control-label">Email Address</label>
+              <div class="col-sm-8">
+                  <input id="email_address" type="email" class = "required form-control">
+              </div>
+            </div>
+            <div class = "form-group">
+              <label for="school" class= "col-sm-2 control-label">School</label>
+              <div class="col-sm-8">
+                  <input id="school" type="school" class = "required form-control">
+              </div>
+            </div>
+            <div class = "form-group">
+              <label class="col-sm-2 control-label"> Education Level </label>
+              <div class ="col-sm-8">
+              <select class = 'browser-default required form-control' name = 'education_level'>
+                <option value="Elementary School">Elementary School (Grades K-5)</option>
+                <option value="Middle School">Middle School (Grades 6-8)</option>
+                <option value="High School">High School (9-12)</option>
+                <option value="College">College (12+)</option>
+              </select>
+            </div>
+            </div>
+            <div class = 'form-group'>
+              <label for="datepicker" class="col-sm-2 control-label">Birthday</label>
+              <div class = 'col-sm-8'>
+                <input name = "datepicker" type="date" class="datepicker required form-control">
+              </div>
+            </div>
+            <div class = 'form-group'>
+              <label for="password" class='col-sm-2 control-label'>Password</label>
+              <div class = 'col-sm-8'>
+                <input type = "password" name="password" class = "required form-control">
+              </div>
+            </div>
+            <div class = 'form-group'>
+              <label for="confirmpassword" class='col-sm-2 control-label'>Confirm Password</label>
+              <div class = 'col-sm-8'>
+                <input type = "password" name="confirmpassword" class = "required form-control">
+              </div>
+            </div>
+        <!--    <div class = 'form-group'>
+              <label for="test5" class='col-sm-2 control-label show-tutor'>I'm a Tutor</label>
+                <input type="checkbox" id="test5" name = "tutorcheck"/>
+            </div>-->
+            <div class ='form-group'>
+              <label class='show-tutor col-sm-2 control-label'>
+                <input type='checkbox' name ='tutorcheck'/>
+                I am a Tutor
+              </label>
+            </div>
+            <div class = 'form-group {{tutors}}'>
+              <label for="nhs_code" class= 'col-sm-2 control-label'>NHS Code</label>
+              <div class = 'col-sm-6'>
+                <input name="nhs_code" type="text" class = 'required form-control' {{tutorrequired}}>
+              </div>
+            </div>
+            <div class='form-group'>
+              <div class= 'col-sm-offset-2 col-sm-10'>
+              <button class="btn waves-effect waves-light" type="submit" name="action">
+                Submit
+              </button>
+            </div>
+          </div>
+          </form>
+
+
+            <!--  <div class = 'row {{tutors}}'>
+                <div class = "card-panel col s5 center-align">
+                  <h4 class> Plan 1: Free </h4>
+                  <h5 class> You tutor only for volunteer hours </h5>
+                    <label>
+                        <input type = "checkbox" id="plan1"/>
+                        <label for="plan1"></label>
+                    </label>
+                </div>
+                <div class = "card-panel col s5 offset-s1 center-align">
+                  <h4> Plan 2: Paid </h4>
+                  <h5> You can tutor for money and volunteer hours! </h5>
+                  <label>
+                      <input type = "checkbox" id="plan2"/>
+                      <label for="plan2"></label>
+                  </label>
+                </div>
+              </div>-->
+          </div>
+      </div>
+</template>

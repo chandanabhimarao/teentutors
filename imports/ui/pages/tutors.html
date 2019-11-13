@@ -1,0 +1,45 @@
+<template name = 'tutors'>
+  <div class='page-header clearfix'>
+    <form id= 'tutorSearch'>
+    <div class='form-group'>
+    <h2> Find a Tutor </h2>
+  <!--  <div class = 'col-sm-2'>
+   <label for ='country'> Country </label>
+      <select class = 'form-control' id='countryselect'>
+        <option value="United States">United States</option>
+        <option value="India">India</option>
+      </select>
+    </div>-->
+    <div class = 'col-sm-2'>
+      <label for = 'subject'> Subject </label>
+          <input id="subject" type="text" class = "required form-control">
+    </div>
+  <!--  <div class = 'col-sm-2'>
+      <label for = 'country'> Country </label>
+          <input disabled id="country" type="text" class = "required form-control" value = "{{user.Country}}">
+    </div>
+    <div class = 'col-sm-2'>
+      <label for = 'school'> School </label>
+          <input disabled id="school" type="text" class = "required form-control" value = "{{user.school}}">
+    </div>-->
+    <div class="pull-right">
+      <!--<input type="text" name="search" class="form-control" width="250px" placeholder="Find a user...">-->
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    </div>
+    </form>
+  </div>
+  <ul class='list-group'>
+    {{#if searching}}
+      {{> loading}}
+    {{else}}
+      {{#each tutors}}
+      <li class='{{#if isSame "userId"}} hide {{/if}}list-group-item clearfix'>
+        <button type = 'button' class= 'list-group-item tutorslist' id = "{{userId}}">{{firstName}}, {{Country}}, {{school}}</button>
+      </li>
+      {{else}}
+      <p class="alert alert-warning">Nothing found for Subject: {{subjectquery}}</p>
+      {{/each}}
+    {{/if}}
+  </ul>
+</template>
